@@ -1,0 +1,177 @@
+$max-width: 800px;
+
+.nrw-map {
+
+  font-family: 'Work Sans';
+  font-size: 1em;
+
+  &__header {
+
+    p {
+
+      // font-family: 'Droid Serif', serif;
+
+    }
+
+  }
+
+  &__main {
+
+  }
+
+  .nrw-map-base-wrapper {
+
+    width: 50%;
+    float: left;
+    position: relative;
+
+    @media (max-width: $max-width) {
+      width: 100%;
+    }
+
+    .nrw-map-base__svg {
+
+      path.-hilight {
+        stroke: white;
+        stroke-width: 2px;
+      }
+
+    }
+
+    .d3-playbooks__infobox {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      &.-empty {
+        visibility: hidden;
+      }
+    }
+
+  }
+
+  .nrw-map-singles {
+
+    width: 50%;
+    float: left;
+
+    @media (max-width: $max-width) {
+      width: 100%;
+    }
+
+    &__row {
+      clear: both;
+    }
+
+    .nrw-map-single {
+
+      width: 70px;
+      padding: 10px;
+      padding-bottom: 0;
+      float: left;
+
+      h3, p {
+
+        line-height: 1;
+        font-size: .8em;
+
+      }
+
+      p {
+        margin: 0;
+        margin-bottom: 10px;
+      }
+
+    }
+
+  }
+
+  &__legend {
+
+    padding-left: 10px;
+    width: 350px;
+    float: left;
+    font-size: .8em;
+
+    @media (max-width: $max-width) {
+      width: 100%;
+    }
+
+    &-row {
+
+    }
+
+    &-row--colors {
+
+      span {
+
+        display: inline-block;
+        width: 40px;
+        height: 15px;
+
+      }
+
+    }
+
+    &-row--labels {
+
+      span {
+
+        display: inline-block;
+        width: 40px;
+
+      }
+
+    }
+
+
+    // ul {
+
+    //   margin: 0;
+    //   padding: 0;
+
+    //   li {
+
+    //     width: 40px;
+    //     float: left;
+    //     position: relative;
+    //     list-style: none;
+    //     padding-left: 20px;
+    //     padding-right: 20px;
+    //     margin-bottom: 20px;
+    //     display: inline;
+
+    //     span {
+
+    //       display: inline-block;
+    //       position: absolute;
+    //       left: 0;
+    //       width: 15px;
+    //       height: 15px;
+
+    //     }
+
+    //   }
+
+    // }
+
+  }
+
+}
+
+
+// FIXME
+.svg-container-responsive {
+
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%; /* aspect ratio */
+  vertical-align: top;
+  overflow: hidden;
+
+  .svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+  }
+}
